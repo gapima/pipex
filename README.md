@@ -12,7 +12,7 @@ Mal posso esperar para compartilhar com vocês todas as vitórias, os desafios e
 
 Fique ligado para atualizações, e se quiser fazer parte dessa jornada ou tiver alguma dúvida, não hesite em me enviar uma mensagem. Estou aqui para ajudar e para construir junto com vocês! 🙌💬
 
-Vamos lá, Gapima e equipe Pipex, rumo ao sucesso!
+Vamos lá!
 
 Até mais,
 
