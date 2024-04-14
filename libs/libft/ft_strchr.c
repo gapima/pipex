@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: glima <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gapima </var/spool/mail/gapima>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 14:34:02 by glima             #+#    #+#             */
-/*   Updated: 2023/10/18 17:03:08 by glima            ###   ########.fr       */
+/*   Created: 2023/10/21 19:58:03 by gapima            #+#    #+#             */
+/*   Updated: 2023/10/31 14:45:37 by glima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t		i;
-	char		*str;
-
-	str = (char *)s;
-	i = 0;
-	while (i < n)
-		str[i++] = c;
-	return (s);
+	while (*s)
+	{
+		if (*s == (unsigned char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (*s == (unsigned char)c)
+		return ((char *)s);
+	return (NULL);
 }

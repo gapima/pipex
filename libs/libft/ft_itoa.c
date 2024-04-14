@@ -1,6 +1,18 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: glima <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/08 13:46:10 by glima             #+#    #+#             */
+/*   Updated: 2023/11/08 17:49:42 by glima            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static size_t	ft_count(int n)
+#include "../../include/libft.h"
+
+size_t	ft_count(int n)
 {
 	size_t	count;
 
@@ -20,7 +32,7 @@ static size_t	ft_count(int n)
 	return (count);
 }
 
-static char	*ft_return_str(int count, int n, char *s)
+char	*ft_return_str(int count, int n, char *s)
 {
 	int		nb;
 

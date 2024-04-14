@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 11:04:43 by glima             #+#    #+#             */
-/*   Updated: 2023/10/31 11:51:25 by glima            ###   ########.fr       */
+/*   Created: 2023/10/26 17:27:09 by glima             #+#    #+#             */
+/*   Updated: 2023/10/31 11:02:19 by glima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*result;
-	int		i;
+	char	*array;
+	size_t	i;
 
 	i = 0;
-	result = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (result == NULL)
+	if (start > ft_strlen((char *)s))
+		return (ft_strdup(""));
+	if (start + len > ft_strlen((char *)s))
+		len = ft_strlen((char *)s) - start;
+	array = malloc(sizeof(char) * (len + 1));
+	if (array == NULL)
 		return (NULL);
-	while (*s1)
+	while (i < len)
 	{
-		result[i] = *s1;
+		array[i] = s[start];
 		i++;
-		s1++;
+		start++;
 	}
-	while (*s2)
-	{
-		result[i] = *s2;
-		s2++;
-		i++;
-	}
-	result[i] = '\0';
-	return (result);
+	array[i] = '\0';
+	return (array);
 }

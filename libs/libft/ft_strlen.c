@@ -1,14 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: glima <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/16 14:07:49 by glima             #+#    #+#             */
+/*   Updated: 2023/10/19 17:28:14 by glima            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	count;
+	size_t	counter;
 
-	count = 0;
-	if (!s)
-		return (0);
-	while (s[count] != '\0')
-		count++;
-	return (count);
+	counter = 0;
+	while (*s)
+	{
+		s++;
+		counter++;
+	}
+	return (counter);
 }

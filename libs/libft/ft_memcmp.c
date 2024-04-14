@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gapima </var/spool/mail/gapima>            +#+  +:+       +#+        */
+/*   By: gapima <gapima@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/21 21:59:08 by gapima            #+#    #+#             */
-/*   Updated: 2023/10/22 14:26:30 by gapima           ###   ########.fr       */
+/*   Created: 2023/10/22 14:40:00 by gapima            #+#    #+#             */
+/*   Updated: 2023/10/22 14:58:19 by gapima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	const char	*s1tmp;
+	const char	*s2tmp;
+	int			i;
 
 	i = 0;
+	s1tmp = s1;
+	s2tmp = s2;
 	while (n)
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		if (s1[i] == '\0' && s2[i] == '\0')
-			return (0);
+		if (s1tmp[i] != s2tmp[i])
+			return ((unsigned char)s1tmp[i] - (unsigned char)s2tmp[i]);
 		i++;
 		n--;
 	}

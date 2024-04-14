@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gapima </var/spool/mail/gapima>            +#+  +:+       +#+        */
+/*   By: gapima <gapima@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/21 21:03:51 by gapima            #+#    #+#             */
-/*   Updated: 2023/10/31 14:47:23 by glima            ###   ########.fr       */
+/*   Created: 2023/10/22 13:58:47 by gapima            #+#    #+#             */
+/*   Updated: 2023/10/25 18:20:27 by glima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
-char	*ft_strrchr(char const *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		len;
+	unsigned char	*stmp;
+	int				itmp;
 
-	len = ft_strlen(s);
-	while (len)
+	itmp = -1;
+	stmp = (unsigned char *)s;
+	while (n)
 	{
-		if (s[len] == (unsigned char)c)
-		{
-			return ((char *)&s[len]);
-		}
-		len--;
+		if (stmp[n - 1] == (unsigned char)c)
+			itmp = (n - 1);
+		n--;
 	}
-	if (s[len] == (unsigned char)c)
-	{
-		return ((char *)&s[len]);
-	}
+	if (itmp > -1)
+		return ((void *)&stmp[itmp]);
 	return (NULL);
 }
