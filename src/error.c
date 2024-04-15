@@ -3,27 +3,27 @@
 
 int error(int type)
 {
-    if (type == 1)
-        ft_putstr_fd("Invalid number of arguments\n", 2);
-    if (type == 2)
-        ft_putstr_fd("Invalid file\n", 2);
-    if (type == 3)
-        ft_putstr_fd("Command <cmd1> <cmd2> empty.\n", 2);
-    return (EXIT_FAILURE);
+	if (type == 1)
+		ft_putstr_fd("Invalid number of arguments\n", 2);
+	if (type == 2)
+		ft_putstr_fd("Invalid file\n", 2);
+	if (type == 3)
+		ft_putstr_fd("Command <cmd1> <cmd2> empty.\n", 2);
+	return (EXIT_FAILURE);
 }
 
 int chenck_empty_cmd(char *s)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while (s[i])
-    {
-        if (s[i] != ' ')
-            return (EXIT_SUCCESS);
-        i++;
-    }
-    return (EXIT_FAILURE);
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] != ' ')
+			return (EXIT_SUCCESS);
+		i++;
+	}
+	return (EXIT_FAILURE);
 }
 
 int	free_arr(char **path)

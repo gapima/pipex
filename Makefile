@@ -11,7 +11,7 @@ LIBFT = ./libs/libft
 HEADERS = -I $(INC)
 LIBS = ./libs/libft/libft.a #-ldl -lglfw -pthread -lm
 
-FILES = src/main.c src/pipex.c src/error.c
+FILES = src/main.c src/pipex.c src/error.c src/utils.c
 
 OBJS = $(FILES:%.c=%.o)
 

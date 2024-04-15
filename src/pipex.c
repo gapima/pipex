@@ -62,7 +62,7 @@ int get_cmd(char **env, t_pipex_data *pipex, char *cmd)
         pipex->ag[i] = ft_substr(tmp[i], 0, ft_strlen(tmp[i]) - 1);
         if (!pipex->ag[i])
         {
-            free(pipex->ag);
+            free_arr(pipex->ag);
             return (free_arr(tmp));
         }
     }

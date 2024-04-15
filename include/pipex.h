@@ -20,6 +20,7 @@ int 	error(int type);
 int 	chenck_empty_cmd(char *s);
 int 	get_cmd(char **env, t_pipex_data *pipex, char *cmd);
 int		free_arr(char **path);
+int 	check_cmd(t_pipex_data *pipex);
 
 char    **get_path(char **envp);
 
