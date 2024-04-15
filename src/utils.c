@@ -18,6 +18,20 @@ int check_cmd(t_pipex_data *pipex)
 		}			
 		free(cmd);
 	}	
-	//error_msg(c->cmd);
+	error_msg(pipex->cmd);
 	return (0); 
+}
+
+int chenck_empty_cmd(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] != ' ')
+			return (EXIT_SUCCESS);
+		i++;
+	}
+	return (EXIT_FAILURE);
 }

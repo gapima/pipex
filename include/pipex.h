@@ -26,5 +26,6 @@ char    **get_path(char **envp);
 
 void	pipex(int infile, int outfile, char **ag, char **env);
 void	free_struct(t_pipex_data *c);
+void	error_msg(char *c);
 
 #endif

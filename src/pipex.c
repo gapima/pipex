@@ -80,4 +80,6 @@ void pipex(int infile, int outfile, char **ag, char **env)
     init_cmd(&cmd2, outfile);
     if (!get_cmd(env, &cmd1, ag[2]) || !get_cmd(env, &cmd2, ag[3]))
         return (free_all(&cmd1, &cmd2));
+    if (!check_cmd(&cmd1) || !check_cmd(&cmd2))
+        return (free_all(&cmd1, &cmd2));
 }

@@ -12,20 +12,6 @@ int error(int type)
 	return (EXIT_FAILURE);
 }
 
-int chenck_empty_cmd(char *s)
-{
-	int i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] != ' ')
-			return (EXIT_SUCCESS);
-		i++;
-	}
-	return (EXIT_FAILURE);
-}
-
 int	free_arr(char **path)
 {
 	int	i;
@@ -48,4 +34,12 @@ void	free_struct(t_pipex_data *c)
 	free_arr(c->path);
 	while (c->ag[i])
 		free(c->ag[i++]);
+}
+
+void	error_msg(char *c)
+{
+	write(2, "-bash: ", 7);
+	write(2, c, ft_strlen(c));
+	write(2, ": ", 2);
+	write(2, "command not found\n", 18);
 }
