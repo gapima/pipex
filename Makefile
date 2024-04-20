@@ -1,5 +1,5 @@
 
-NAME = pipex.a
+NAME = pipex
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g3 -Wunreachable-code -Ofast
@@ -11,7 +11,7 @@ LIBFT = ./libs/libft
 HEADERS = -I $(INC)
 LIBS = ./libs/libft/libft.a #-ldl -lglfw -pthread -lm
 
-FILES = src/main.c src/pipex.c src/error.c src/utils.c
+FILES = src/main.c src/pipex.c src/utils.c src/ft_splitpath.c src/string_utils.c src/free.c
 
 OBJS = $(FILES:%.c=%.o)
 
