@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 17:27:09 by glima             #+#    #+#             */
-/*   Updated: 2023/10/31 11:02:19 by glima            ###   ########.fr       */
+/*   Created: 2023/11/08 18:29:47 by glima             #+#    #+#             */
+/*   Updated: 2023/11/09 17:34:04 by glima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	ft_putstr(char *s, char *t)
 {
-	char	*array;
-	size_t	i;
-
-	i = 0;
-	if (start > ft_strlen((char *)s))
-		return (ft_strdup(""));
-	if (start + len > ft_strlen((char *)s))
-		len = ft_strlen((char *)s) - start;
-	array = malloc(sizeof(char) * (len + 1));
-	if (array == NULL)
-		return (NULL);
-	while (i < len)
+	if (!s)
+		return (2);
+	if (t)
 	{
-		array[i] = s[start];
-		i++;
-		start++;
+		write(2, "-bash: ", 7);
+		write(2, t, ft_strlen(t));
+		write(2, ": ", 2);
 	}
-	array[i] = '\0';
-	return (array);
+	while (*s)
+	{
+		write(2, &(*s), 1);
+		s++;
+	}
+	write(2, "\n", 1);
+	return (2);
 }

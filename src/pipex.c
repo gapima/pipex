@@ -40,7 +40,7 @@ static char	**get_path(char **ep)
 			env = ft_substr(ep[i], START, ft_strlen(ep[i]));
 			if (!env)
 				return (NULL);
-			ret = ft_splitpath(env, ':');
+			ret = ft_split(env, ':');
 			if (!ret)
 			{
 				free(env);
@@ -62,7 +62,7 @@ static int	get_cmd(char **ep, t_pipex_data *c, char *cmd)
 	c->path = get_path(ep);
 	if (!c->path)
 		return (0);
-	tmp = ft_splitpath(cmd, ' ');
+	tmp = ft_split(cmd, ' ');
 	if (!tmp)
 		return (0);
 	c->cmd = ft_substr(tmp[i + 1], 0, ft_strlen(tmp[i + 1]) - 1);
