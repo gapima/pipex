@@ -1,4 +1,5 @@
 
+
 NAME = pipex
 
 CC = cc
@@ -9,7 +10,7 @@ INC = ./include
 LIBFT = ./libs/libft
 
 HEADERS = -I $(INC)
-LIBS = ./libs/libft/libft.a #-ldl -lglfw -pthread -lm
+LIBS = ./libs/libft/libft.a
 
 FILES = src/main.c src/pipex.c src/utils.c src/free.c
 
@@ -36,8 +37,5 @@ fclean: clean
 	@$(RM) $(NAME)
 
 re: fclean all
-
-val: all
-	valgrind --leak-check=full --show-leak-kinds=all --suppressions=codam.sup --track-origins=yes ./$(NAME)
 
 .PHONY: all clean fclean re

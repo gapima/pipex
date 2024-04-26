@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/mnt/c/Users/gabriel.moura/42cursus/pipex/src",
-      "program": "/mnt/c/Users/gabriel.moura/42cursus/pipex/src/build/Debug/outDebug",
+      "cwd": "/nfs/homes/glima/42cursus/pipex/libs/libft",
+      "program": "/nfs/homes/glima/42cursus/pipex/libs/libft/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
