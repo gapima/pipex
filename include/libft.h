@@ -6,7 +6,7 @@
 /*   By: glima <glima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 15:27:56 by glima             #+#    #+#             */
-/*   Updated: 2024/04/26 17:17:27 by glima            ###   ########.fr       */
+/*   Updated: 2024/04/26 18:54:32 by glima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@
 # include <sys/wait.h>
 # include <errno.h>
 # include <string.h>
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;
-
+}	t_list;
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_putstr(char *s, char *t);
